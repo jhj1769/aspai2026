@@ -371,6 +371,14 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
+.welcome-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
 .welcome-placeholder {
   aspect-ratio: 4/3;
   display: flex;
