@@ -62,13 +62,13 @@
   </nav>
 
   <main>
-    <!-- Hero Carousel: ASPAI + Summer School (two slides, dots, Register per slide) -->
-    <div class="hero-carousel" id="heroCarousel">
-      <div class="hero-carousel-track">
-        <!-- Slide 1: ASPAI -->
-        <div class="hero-slide hero-slide-aspai" data-slide="0" data-register-href="registration.html">
-          <section class="hero-banner">
-            <div class="hero-pattern" aria-hidden="true"></div>
+    <!-- Hero Banner: only this block switches between ASPAI / Summer School (dots + Register per slide) -->
+    <section class="hero-banner hero-banner-with-carousel">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="hero-carousel" id="heroCarousel">
+        <div class="hero-carousel-track">
+          <!-- Slide 1: ASPAI -->
+          <div class="hero-slide" data-slide="0" data-register-href="registration.html">
             <div class="container hero-inner">
               <p class="hero-conf-name">The 2nd Asia-Pacific Symposium on Process and Artificial Intelligence</p>
               <h1 class="hero-title">ASPAI 2026</h1>
@@ -82,32 +82,9 @@
                 <a href="call-for-papers.html" class="btn btn-hero-secondary">Call for Papers</a>
               </div>
             </div>
-          </section>
-          <section id="welcome" class="section welcome welcome-page">
-            <div class="container">
-              <h2 class="section-title">Welcome to Pohang, South Korea!</h2>
-              <div class="welcome-content-inner">
-                <div class="welcome-photo-wrap">
-                  <img src="사진/포항8.jpg" alt="Pohang, POSTECH" class="welcome-photo-large" />
-                </div>
-                <div class="welcome-text-block">
-                  <p>We are delighted to invite you to <strong>Pohang, Republic of Korea</strong>, for the <strong>2nd Asia-Pacific Symposium on Process and Artificial Intelligence (ASPAI 2026)</strong>.</p>
-                  <p>The symposium will be held from <strong>August 24 to August 28, 2026</strong>, at the <strong>POSCO International Center, POSTECH (Pohang University of Science and Technology)</strong>.</p>
-                  <p>The <strong>Asia-Pacific Process Intelligence (APPI) Network</strong> invites researchers, practitioners, and policymakers to this forum dedicated to advancing process intelligence, AI-driven process analytics, and context-sensitive BPM across the Asia-Pacific region.</p>
-                  <p>APPI Network was established in 2025 to address the region's unique challenges—diverse regulatory environments, varying BPM maturity levels, and heterogeneous digital ecosystems—while leveraging opportunities enabled by AI, automation, and process data.</p>
-                  <p>This year's symposium offers a rich program: an <strong>Industry Day in Seoul</strong>, a <strong>two-day symposium in Pohang</strong> with keynote speakers and paper presentations, and a <strong>Process Mining Summer School</strong>.</p>
-                  <p class="welcome-signature">We look forward to meeting you in Pohang!</p>
-                  <p class="welcome-chair"><strong>ASPAI 2026 Organizing Committee</strong></p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <!-- Slide 2: Summer School -->
-        <div class="hero-slide hero-slide-summer" data-slide="1" data-register-href="summer-school.html">
-          <section class="hero-banner">
-            <div class="hero-pattern" aria-hidden="true"></div>
+          </div>
+          <!-- Slide 2: Summer School -->
+          <div class="hero-slide" data-slide="1" data-register-href="summer-school.html">
             <div class="container hero-inner">
               <p class="hero-conf-name">APPI Summer School on Process Intelligence</p>
               <h1 class="hero-title">Summer School 2026</h1>
@@ -121,32 +98,35 @@
                 <a href="https://appinetwork.org/aspai2026summer-school-program" class="btn btn-hero-secondary" target="_blank" rel="noopener">Program Details</a>
               </div>
             </div>
-          </section>
-          <section class="section welcome welcome-page">
-            <div class="container">
-              <h2 class="section-title">Welcome to Pohang, South Korea!</h2>
-              <div class="welcome-content-inner">
-                <div class="welcome-photo-wrap">
-                  <img src="사진/포항8.jpg" alt="Pohang, POSTECH" class="welcome-photo-large" />
-                </div>
-                <div class="welcome-text-block">
-                  <p>The <strong>1st APPI Summer School on Process Intelligence</strong> will be held at <strong>POSTECH (Pohang University of Science and Technology)</strong>, <strong>August 27–28, 2026</strong>.</p>
-                  <p>The <strong>Asia-Pacific Process Intelligence (APPI) Summer School</strong> serves as the premier forum for exploring the intersection of Process Mining, Data Science, and AI in the Asia-Pacific region. The curriculum covers process discovery and conformance checking, data preprocessing, performance analysis, predictive analytics, and hands-on sessions with process mining tools.</p>
-                  <p class="welcome-signature">We look forward to seeing you at the Summer School!</p>
-                  <p class="welcome-chair"><strong>ASPAI 2026 Organizing Committee</strong></p>
-                </div>
-              </div>
-            </div>
-          </section>
+          </div>
+        </div>
+        <div class="hero-carousel-dots" aria-label="Carousel navigation">
+          <button type="button" class="hero-dot active" aria-label="Show ASPAI" data-index="0"></button>
+          <button type="button" class="hero-dot" aria-label="Show Summer School" data-index="1"></button>
         </div>
       </div>
+    </section>
 
-      <!-- Carousel dots -->
-      <div class="hero-carousel-dots" aria-label="Carousel navigation">
-        <button type="button" class="hero-dot hero-dot-aspai active" aria-label="Show ASPAI" data-index="0"></button>
-        <button type="button" class="hero-dot hero-dot-summer" aria-label="Show Summer School" data-index="1"></button>
+    <!-- Welcome Section: single block below hero (no carousel) -->
+    <section id="welcome" class="section welcome welcome-page">
+      <div class="container">
+        <h2 class="section-title">Welcome to Pohang, South Korea!</h2>
+        <div class="welcome-content-inner">
+          <div class="welcome-photo-wrap">
+            <img src="사진/포항8.jpg" alt="Pohang, POSTECH" class="welcome-photo-large" />
+          </div>
+          <div class="welcome-text-block">
+            <p>We are delighted to invite you to <strong>Pohang, Republic of Korea</strong>, for the <strong>2nd Asia-Pacific Symposium on Process and Artificial Intelligence (ASPAI 2026)</strong>.</p>
+            <p>The symposium will be held from <strong>August 24 to August 28, 2026</strong>, at the <strong>POSCO International Center, POSTECH (Pohang University of Science and Technology)</strong>.</p>
+            <p>The <strong>Asia-Pacific Process Intelligence (APPI) Network</strong> invites researchers, practitioners, and policymakers to this forum dedicated to advancing process intelligence, AI-driven process analytics, and context-sensitive BPM across the Asia-Pacific region.</p>
+            <p>APPI Network was established in 2025 to address the region's unique challenges—diverse regulatory environments, varying BPM maturity levels, and heterogeneous digital ecosystems—while leveraging opportunities enabled by AI, automation, and process data.</p>
+            <p>This year's symposium offers a rich program: an <strong>Industry Day in Seoul</strong>, a <strong>two-day symposium in Pohang</strong> with keynote speakers and paper presentations, and a <strong>Process Mining Summer School</strong>.</p>
+            <p class="welcome-signature">We look forward to meeting you in Pohang!</p>
+            <p class="welcome-chair"><strong>ASPAI 2026 Organizing Committee</strong></p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <!-- Footer -->
