@@ -178,7 +178,7 @@
         index = Math.max(0, Math.min(index, total - 1));
         if (index === current) return;
         current = index;
-        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        track.style.transform = 'translateX(-' + (current * 50) + '%)';
         dots.forEach(function (d, i) {
           d.classList.toggle('active', i === current);
         });
