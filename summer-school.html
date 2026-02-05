@@ -8,11 +8,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="search.js" defer></script>
 </head>
 <body>
   <div class="top-bar">
     <div class="container top-bar-inner">
       <a href="mailto:jonghyeon.ko@qut.edu.au">Contact Us</a>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search..." aria-label="Search site" />
+        <button type="button" id="searchBtn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <div id="searchResults" class="search-results"></div>
+      </div>
     </div>
   </div>
   <header class="header">
@@ -126,8 +134,9 @@
         <h2 class="subsection-title">Accommodation Options</h2>
         <ul>
           <li>POSCO International Center (on-site)</li>
-          <li>Hotels in Youngildae (20–30 minutes away)</li>
-          <li>Lahan Hotel (30 minutes by taxi)</li>
+          <li><a href="https://www.google.com/travel/search?q=%ED%98%B8%ED%85%94%20%EC%98%81%EC%9D%BC%EB%8C%80&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72799179%2C72803964%2C72882230%2C72958624%2C73059275%2C73064764%2C73249147%2C121509481%2C121522131&hl=ko-KR&gl=kr&ssta=1&ts=CAEqBwoFOgNLUlc&qs=CAAgACgA&ap=KigKEgmsy4b0qgFCQBGhkqn3qCpgQBISCb-5Eo4dAkJAEaGSqbLAKmBAMAC6AQhvdmVydmlldw&ictx=111&ved=0CAAQ5JsGahcKEwjw2Kv448GSAxUAAAAAHQAAAAAQSA" target="_blank" rel="noopener">Hotels in Youngildae</a> (20–30 minutes away)</li>
+          <li><a href="https://www.google.com/travel/search?q=%EB%85%B8%EB%B8%94%EB%A6%AC%EC%98%A8%20%ED%98%B8%ED%85%94&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72799179%2C72803964%2C72882230%2C72958624%2C73059275%2C73064764%2C73249147%2C121509481%2C121522131&hl=ko-KR&gl=kr&ssta=1&ts=CAEaOgocEhoKDS9nLzExbnM1MGRmNDI6Ce2PrO2VreyLnBIaEhQKBwjqDxACGAkSBwjqDxACGAoYATICEAAqBwoFOgNLUlc&qs=CAAgACgAMidDaGtJb2RlVm85YnF6Tk5lR2cwdlp5OHhNVzV6TlRCa1pqUXlFQUU4DUgA&ap=KigKEglQ_UXT6_9BQBGsmWublipgQBISCVXa0qOAA0JAEayZa3NUK2BAMAA&ictx=111&ved=0CAAQ5JsGahgKEwjw2Kv448GSAxUAAAAAHQAAAAAQlgM" target="_blank" rel="noopener">Noblion Hotel</a> (20–30 minutes away)</li>
+          <li><a href="https://www.google.com/travel/search?q=%EB%9D%BC%ED%95%9C%20%ED%98%B8%ED%85%94&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72799179%2C72803964%2C72882230%2C72958624%2C73059275%2C73064764%2C73249147%2C121509481%2C121522131&hl=ko-KR&gl=kr&ssta=1&ts=CAEqBwoFOgNLUlc&qs=CAAgACgA&ap=KigKEglQ_UXT6_9BQBGsmWublipgQBISCVXa0qOAA0JAEayZa3NUK2BAMAA&ictx=111&ved=0CAAQ5JsGahgKEwjw2Kv448GSAxUAAAAAHQAAAAAQxwM" target="_blank" rel="noopener">Lahan Hotel</a> (30 minutes by taxi)</li>
           <li>Dormitory option for students (5–10 minutes away by walk)</li>
         </ul>
 
@@ -136,6 +145,17 @@
       </div>
     </div>
   </main>
+  <section class="supported-by-section">
+    <div class="container">
+      <h2 class="supported-title">Supported by</h2>
+      <div class="supported-logos">
+        <div class="supported-logo">
+          <img src="사진/포항공대.jpeg" alt="POSTECH (Pohang University of Science and Technology)" />
+          <span class="supported-name">POSTECH</span>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
