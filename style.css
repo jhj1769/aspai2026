@@ -1383,58 +1383,59 @@ a:hover {
   max-height: 60px;
 }
 
-/* Footer Supported by */
-.footer-supported {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-xl);
-  padding-bottom: var(--space-xl);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+/* Supported by section (Sponsors page) */
+.supported-by-section {
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
 }
 
-.footer-supported-label {
-  font-size: 0.8rem;
+.supported-title {
+  margin: 0 0 var(--space-xl);
+  font-family: var(--font-body);
+  font-size: 1rem;
   font-weight: 600;
-  color: #64748b;
+  color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
-.footer-supported-logo {
+.supported-logos {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.supported-logo {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
-  background: rgba(255, 255, 255, 0.08);
-  padding: var(--space-sm) var(--space-lg);
-  border-radius: var(--radius);
-  transition: background var(--transition);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  transition: box-shadow var(--transition), border-color var(--transition);
 }
 
-.footer-supported-logo:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.footer-supported-logo img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+.supported-logo img {
+  max-width: 100px;
+  max-height: 100px;
   object-fit: contain;
-  background: #fff;
 }
 
-.footer-supported-logo span {
-  font-size: 0.85rem;
+.supported-logo:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--color-accent);
+}
+
+.supported-name {
+  font-size: 0.9rem;
   font-weight: 600;
-  color: #94a3b8;
-}
-
-@media (max-width: 480px) {
-  .footer-supported {
-    flex-direction: column;
-    gap: var(--space-sm);
-  }
+  color: var(--color-text-muted);
 }
 
 /* FAQs */
